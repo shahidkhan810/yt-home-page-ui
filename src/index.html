@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="./input.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navbar -->
+  <nav class="flex fixed w-full bg-white border-b items-center justify-between gap-4 py-1 px-3">
+
+    <div class="flex items-center gap-2">
+        <button class="hover:bg-gray-100 rounded-full w-8 h-8">
+            <i class="fa-solid fa-bars text-[16px]"></i>
+        </button>
+        <button class="flex items-center gap-1">
+            <img 
+                src="./imgs/youtube.png" 
+                class="w-10 *"
+                alt=""
+            >
+            <span class="font-bold">YouTube</span>
+        </button>
+    </div>
+
+    <div class="flex items-center justify-start gap-1 max-sm:hidden max-sm">
+        <div class="w-full flex items-center">
+            <input 
+                type="text"
+                class="border rounded-l-full ronded-full px-3 py-1"
+                placeholder="Search"
+            >
+            <button class="rounded-r-full w-10 h-[34px] bg-gray-100">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <button class="w-9 h-8 bg-gray-100 rounded-full">
+            <i class="fa-solid fa-microphone"></i>
+        </button>
+    </div>
+
+    <div class="flex items-center gap-1.5">
+        <button class="w-9 h-9 bg-gray-100 rounded-full gap-1 sm:hidden min" >
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="w-9 h-9 bg-gray-100 rounded-full">
+            <i class="fa-solid fa-video"></i>
+        </button>
+        <button class="w-9 h-9 bg-gray-100 rounded-full">
+            <i class="fa-solid fa-bell"></i>
+        </button>
+        <button class="rounded-full">
+            <img class="w-9 h-9 rounded-full" src="./imgs/me.jpg" alt="">
+        </button>
+    </div>  
+  </nav>
+
+  <!-- side navbar -->
+  <div class="flex overflow-y-auto pb-20 custom-scrollbar mt-[50px] bg-white fixed max-sm:hidden max-lg:w-[70px] w-[230px] max-lg:px-0 px-4 py-3 h-screen items-start flex-col gap-1 ">
+    <button class="p-2 flex max-lg:flex-col max-lg:gap-1 items-center gap-4 hover: bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-house"></i>
+        <span class="max-lg:text-[12px]">Home</span>
+    </button>
+    <button class="p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-4 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-arrow-up-short-wide"></i>
+        <span class="max-lg:text-[12px]">Shorts</span>
+    </button>
+    <button class="p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-4 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fab fa-youtube"></i>
+        <span class="max-lg:text-[10px]">Subscripition</span>
+    </button>
+    
+    <div class="w-full h-[1px] bg-gray-200 max-lg:hidden"></div>
+
+    <button class="p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-4 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-circle-user lg:hidden"></i>
+        <span class="max-lg:text-[13px]">You</span>
+        <i class="fa-solid fa-angle-right max-lg:hidden"></i>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-id-card-clip"></i>
+        <span>Your channel</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span class="max-lg:text-[12px]">History</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-circle-play"></i>
+        <span class="max-lg:text-[12px]">Playlist</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-clapperboard"></i>
+        <span class="max-lg:text-[12px]">Your videos</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-regular fa-clock"></i>
+        <span class="max-lg:text-[12px]">Watch later</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-thumbs-up"></i>
+        <span class="max-lg:text-[12px]">Liked videos</span>
+    </button>
+
+    <div class="w-full h-[1px] bg-gray-200 max-lg:hidden"></div>
+
+    <h1 class="font-semibold mt-1 text-base max-lg:hidden">Subscripitions</h1>
+    <div class="flex flex-col gap-1 items-center w-full max-lg:hidden">
+        <button class="flex items-center gap-2 hover:bg-gray-100 w-full py-1.5 px-2 rounded-xl">
+            <img 
+                src="./imgs/c1.png"
+                class="rounded-full border-[1px] border-gray-400 w-6 h-6"
+            />
+            <span class="font-medium text-sm line-clamp-1">Mushahid Ali</span>
+        </button>
+    
+        <button class="flex items-center gap-2 hover:bg-gray-100 w-full py-1.5 px-2 rounded-xl">
+            <img 
+                src="./imgs/c2.png"
+                class="rounded-full border-[1px] border-gray-400 w-6 h-6"
+            />
+            <span class="font-medium text-sm line-clamp-1">Mushahid Ali</span>
+        </button>
+    
+        <button class="flex items-center gap-2 hover:bg-gray-100 w-full py-1.5 px-2 rounded-xl">
+            <img 
+                src="./imgs/c3.jpeg"
+                class="rounded-full border-[1px] border-gray-400 w-6 h-6"
+            />
+            <span class="font-medium text-sm line-clamp-1">Mushahid Ali</span>
+        </button>
+    
+        <button class="flex items-center gap-2 hover:bg-gray-100 w-full py-1.5 px-2 rounded-xl">
+            <img 
+                src="./imgs/c4.jpeg"
+                class="rounded-full border-[1px] border-gray-400 w-6 h-6"
+            />
+            <span class="font-medium text-sm line-clamp-1">Mushahid Ali</span>
+        </button>
+    
+        <button class="flex items-center gap-2 hover:bg-gray-100 w-full py-1.5 px-2 rounded-xl">
+            <img 
+                src="./imgs/c5.jpeg"
+                class="rounded-full border-[1px] border-gray-400 w-6 h-6"
+            />
+            <span class="font-medium text-sm line-clamp-1">Mushahid Ali</span>
+        </button>
+    </div>
+
+    <div class="w-full h-[1px] bg-gray-200 max-lg:hidden"></div>
+
+    <!-- Start here -->
+    <h1 class="font-semibold mt-1 text-base max-lg:hidden">Explore</h1>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-fire-flame-curved"></i>
+        <span class="max-lg:text-[12px]">Trending</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-music"></i>
+        <span class="max-lg:text-[12px]">Music</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-gamepad"></i>
+        <span class="max-lg:text-[12px]">Gaming</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-newspaper"></i>
+        <span class="max-lg:text-[12px]">News</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <i class="fa-solid fa-trophy"></i>
+        <span class="max-lg:text-[12px]">Sport</span>
+    </button>
+
+    <h1 class="font-semibold mt-1 text-base max-lg:hidden">More from YouTube</h1>  
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <img class="w-6 h-6" src="./imgs/youtube.png" alt="">
+        <span class="max-lg:text-[12px]">YouTube Premium</span>
+    </button>
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <img class="w-6 h-6" src="./imgs/video.png" alt="">
+        <span class="max-lg:text-[12px]">YouTube Studio</span>
+    </button> 
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <img class="w-6 h-6" src="./imgs/music.png" alt="">
+        <span class="max-lg:text-[12px]">YouTube Music</span>
+    </button> 
+    <button class="max-lg:hidden p-2 flex items-center max-lg:flex-col max-lg:gap-1 gap-3 hover:bg-gray-100 w-full px-3 rounded-xl">
+        <img class="w-6 h-6" src="./imgs/youtube (1).png" alt="">
+        <span class="max-lg:text-[12px]">YouTube Kids</span>
+    </button>
+
+  </div>
+
+
+
+  <!-- Section -->
+   <section class="pt-[55px] max-sm:px-5 flex flex-col sm:pl-[85px] lg:pl-[240px]">
+
+    <!-- Navbar -->
+    <div class="sticky flex overflow-x-auto gap-2 w-full">
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">All</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Music</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Mix</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md flex items-center">Pakistan dramas</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Indian pop music</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Reverberation</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Ghazal</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Juke box</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">Sargun metha</button>
+        <button class="py-1 px-1.5 bg-slate-200 rounded-md">T-Series</button>
+    </div>
+
+    <!-- content -->
+    <div></div>
+
+   </section>
+</body>
+</html>
